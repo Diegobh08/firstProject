@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Personal</title>
+</head>
+<body>
+  <!-- Barra de navegacion principal -->
+  <header id="inicio">
+    <nav aria-label="Navegacion principal">
+      <a href="#inicio" title="Ir al inicio">Inicio</a>
+      <a href="#tabla">Tabla</a>
+      <a href="#galeria">Multimedia</a>
+      <a href="#contacto">Formulario</a>
+  </header>
+
+  <main>
+    <!-- Seccion combinada de elementos: texto, lista e imagen -->
+    <section id="servicios">
+      <h1>Servicios de desarrollo web</h1>
+      <ul>
+        <li>Landing pages</li>
+        <li>Formularios</li>
+        <li>Soporte basico</li>
+      </ul>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=60" alt="Equipo de trabajo con laptop" width="420" height="280" loading="lazy">
+        <figcaption>Trabajo remoto y soluciones a medida.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Tabla solicitada -->
+    <section id="tabla">
+      <h2>Tabla de planes</h2>
+      <table>
+        <caption>Comparacion de planes</caption>
+        <thead>
+          <tr>
+            <th scope="col">Plan</th>
+            <th scope="col">Incluye</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Basico</th>
+            <td>Pagina informativa, formulario simple</td>
+            <td>$49</td>
+          </tr>
+          <tr>
+            <th scope="row">Pro</th>
+            <td>Landing, tabla, integraciones</td>
+            <td>$99</td>
+          </tr>
+          <tr>
+            <th scope="row">Premium</th>
+            <td>SEO, analitica, soporte 30 dias</td>
+            <td>$149</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- Elemento multimedia -->
+    <section id="galeria">
+      <h2>Multimedia</h2>
+      <iframe width="835" height="470" src="https://www.youtube.com/embed/ksYfa0ix9S4" title="¿Qué es el Servicio de Desarrollo Web? Características y sus beneficios" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </section>
+    <a href="https://www.youtube.com/watch?v=9on_3vtGM68">Accede aqui para ver otro similar</a>
+    <!-- Formulario solicitado con el modelo indicado -->
+    <section id="contacto">
+      <h1>Formulario</h1>
+
+      <div class="cajaformulario">
+        <form action="formulario2.html" method="post">
+          <h2>Nombre y apellidos *</h2>
+          <input type="text" name="nombre" id="nombre">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="apellido" id="nombre">
+          <label for="apellido">Primer apellido</label>
+          <input type="text" name="apellido" id="nombre">
+          <label for="apellido">Segundo apellido</label>
+          <h2>Direccion *</h2>
+          <input type="text" name="direccion" id="direccion">
+          <label for="direccion">Calle, numero, piso, puerta</label>
+          <input type="text" name="direccion" id="direccion">
+          <label for="direccion">Codigo postal</label>
+          <input type="text" name="direccion" id="direccion">
+          <label for="direccion">Municipio</label>
+          <select name="provincia" id="direccion">
+            <option value="nathing" selected="nathing"></option>
+            <option value="provincia1">Provincia 1</option>
+            <option value="provincia2">Provincia 2</option>
+            <option value="provincia3">Provincia 3</option>
+          </select>
+          <label for="provincia">Provincia</label>
+
+          <select name="pais" id="pais">
+            <option value="nathing" selected="nathing"></option>
+            <option value="colombia">Colombia</option>
+            <option value="brasil">Brasil</option>
+            <option value="Peru">Peru</option>
+          </select>
+          <label for="provincia">Pais</label>
+
+          <h2>Email *</h2>
+          <input type="email" placeholder="Ingresa tu correo">
+          <h2>Telefono *</h2>
+          <input type="text">
+          <label for="telefono">Fijo</label>
+          <input type="text">
+          <label for="movil">Movil</label>
+          <br>
+          <button>Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer>
+    <!-- Comentario: pie de pagina con datos simples -->
+    <p>Contacto: info@ejemplo.com</p>
+  </footer>
+</body>
+</html>
