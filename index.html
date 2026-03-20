@@ -1,16 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Personal</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Personal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-!-- Contenedor PRINCIPAL donde JavaScript construye toda la página -->
-  <div id="app"></div>
+    <div id="app">
+        <header id="inicio">
+            <nav id="main-nav" aria-label="Navegacion principal">
+                <button class="nav-button is-active" data-section="inicio" title="Ir al inicio" onclick="mostrarSeccion('inicio')">Inicio</button>
+                <button class="nav-button" data-section="tabla" title="Ir a la tabla" onclick="mostrarSeccion('tabla')">Tabla</button>
+                <button class="nav-button" data-section="galeria" title="Ir a multimedia" onclick="mostrarSeccion('galeria')">Multimedia</button>
+                <button class="nav-button" data-section="contacto" title="Ir al formulario" onclick="mostrarSeccion('contacto')">Formulario</button>
+            </nav>
+        </header>
 
-  <!-- Conecta tu archivo JS que genera todo dinámicamente -->
-  <script src="main.js"></script>
+        <main id="page-content">
+            <section id="inicio-section" class="page-section">
+                <h1>Servicios de desarrollo web</h1>
+                <ul id="servicios-lista"></ul>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=60" alt="Equipo de trabajo con laptop" width="420" height="280" loading="lazy">
+                    <figcaption>Trabajo remoto y soluciones a medida.</figcaption>
+                </figure>
+            </section>
+
+            <section id="tabla-section" class="page-section is-hidden">
+                <h2>Tabla de planes</h2>
+                <table>
+                    <caption>Comparacion de planes</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Plan</th>
+                            <th scope="col">Incluye</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="planes-body"></tbody>
+                </table>
+            </section>
+
+            <section id="galeria-section" class="page-section is-hidden">
+                <h2>Multimedia</h2>
+                <iframe width="835" height="470" src="https://www.youtube.com/embed/ksYfa0ix9S4" title="Que es el Servicio de Desarrollo Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a href="https://www.youtube.com/watch?v=9on_3vtGM68" target="_blank" rel="noreferrer">Accede aqui para ver otro similar</a>
+            </section>
+
+            <section id="contacto-section" class="page-section is-hidden">
+                <h1>Formulario</h1>
+                <div class="cajaformulario">
+                    <form id="contact-form" action="#" method="post" onsubmit="return enviarFormulario(event)">
+                        <h2>Nombre y apellidos *</h2>
+                        <input type="text" name="nombre" id="nombre" required>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="apellido1" id="apellido1" required>
+                        <label for="apellido1">Primer apellido</label>
+                        <input type="text" name="apellido2" id="apellido2">
+                        <label for="apellido2">Segundo apellido</label>
+
+                        <h2>Direccion *</h2>
+                        <input type="text" name="direccion" id="direccion" required>
+                        <label for="direccion">Calle, numero, piso, puerta</label>
+                        <input type="text" name="codigoPostal" id="codigoPostal" required>
+                        <label for="codigoPostal">Codigo postal</label>
+                        <input type="text" name="municipio" id="municipio" required>
+                        <label for="municipio">Municipio</label>
+
+                        <select name="provincia" id="provincia" required></select>
+                        <label for="provincia">Provincia</label>
+
+                        <select name="pais" id="pais" required></select>
+                        <label for="pais">Pais</label>
+
+                        <h2>Email *</h2>
+                        <input type="email" placeholder="Ingresa tu correo" id="email" required>
+
+                        <h2>Telefono *</h2>
+                        <input type="text" id="telefono">
+                        <label for="telefono">Fijo</label>
+                        <input type="text" id="movil">
+                        <label for="movil">Movil</label>
+                        <br>
+                        <button type="submit">Enviar</button>
+                        <p id="form-message" class="form-message is-hidden">Se envio el formulario exitosamente.</p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Comentario: pie de pagina con datos simples -->
+            <p>Contacto: info@ejemplo.com</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
