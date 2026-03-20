@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  background: #102a43;
+  color: #fff;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+}
+
+.main-nav button {
+  border: 1px solid #bcccdc;
+  background: #f0f4f8;
+  color: #102a43;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.main-nav button.active {
+  background: #d9e2ec;
+  font-weight: 700;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 42, 67, 0.08);
+}
+
+img,
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #d9e2ec;
+  padding: 0.85rem;
+  text-align: left;
+}
+
+.cajaformulario form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  padding: 0.75rem;
+  border: 1px solid #bcccdc;
+  border-radius: 10px;
+}
+
+form button {
+  width: fit-content;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #0b7285;
+  color: #fff;
+  cursor: pointer;
+}
+
+a {
+  color: #0b7285;
+}
+
+footer {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+}
